@@ -8,6 +8,14 @@ body {
   background-color: #384259;
 }
 
+.fa-times {
+  color: #7ac7c4;
+}
+
+.fa-circle {
+  color: #c4edde;
+}
+
 .container {
   display: grid;
   width: 400px;
@@ -61,4 +69,24 @@ body {
 .grid-box:nth-child(9) {
   border-bottom: 0;
   border-right: 0;
+}
+
+.player {
+  text-align: center;
+  margin: 100px auto;
+}
+.choice {
+  display: inline;
+  padding: 15px;
+  font-size: 5em;
+}
+
+.cross {
+  display: inline;
+  margin: 50px;
+}
+
+.circle {
+  display: inline;
+  margin: 50px;
 }

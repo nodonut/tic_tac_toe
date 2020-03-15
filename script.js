@@ -1,10 +1,8 @@
 const gridBoxes = document.querySelectorAll('.grid-box');
 
-const playerFactory = (name, choice) => {
-  return { name, choice };
+const playerFactory = (name, choice, moveset) => {
+  return { name, choice, moveset };
 };
-
-const player1 = playerFactory('ONE', 'X');
 
 const displayController = player => {
   gridBoxes.forEach(box => {
@@ -21,3 +19,19 @@ const displayController = player => {
     );
   });
 };
+
+const crossChoice = document.querySelector('.cross');
+const circleChoice = document.querySelector('.circle');
+
+crossChoice.addEventListener('click', () => {
+  const playerCross = playerFactory('cross', 'X', []);
+  displayController(playerCross);
+  console.log(playerCross);
+});
+
+circleChoice.addEventListener('click', () => {
+  const playerCircle = playerFactory('circle', 'O', []);
+  displayController(playerCircle);
+
+  console.log(playerCircle);
+});
