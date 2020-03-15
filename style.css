@@ -10,10 +10,10 @@ body {
 
 .container {
   display: grid;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   margin: auto;
-  padding: 80px 0;
+  padding: 60px 0;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
@@ -22,8 +22,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3em;
+  font-size: 5em;
   border: 3px solid #f73859;
+  text-align: center;
 }
 
 .grid-box:first-child {
