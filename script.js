@@ -4,6 +4,17 @@ const playerFactory = (name, choice, moveset) => {
   return { name, choice, moveset };
 };
 
+const checkMove = player => {
+  if (player.choice == 'X') {
+  }
+};
+
+const gameFlow = (player1, player2) => {
+  if (player1.moveset.length < 0) {
+    alert('Player 1 start');
+  }
+};
+
 const displayController = player => {
   const crossBox = document.createElement('span');
   gridBoxes.forEach(box => {
@@ -17,7 +28,6 @@ const displayController = player => {
           const boxId = e.target.id;
           player.moveset[boxId] = 'X';
         }
-        trackMoves(player);
       },
       { once: false }
     );
@@ -32,6 +42,8 @@ crossChoice.addEventListener(
   () => {
     const playerCross = playerFactory('cross', 'X', {});
     displayController(playerCross);
+    trackMoves(playerCross);
+
     console.log(playerCross);
   },
   { once: true }
@@ -42,6 +54,7 @@ circleChoice.addEventListener(
   () => {
     const playerCircle = playerFactory('circle', 'O', {});
     displayController(playerCircle);
+    trackMoves(playerCircle);
 
     console.log(playerCircle);
   },
@@ -49,7 +62,7 @@ circleChoice.addEventListener(
 );
 
 function trackMoves(player) {
-  if (player.moveset.length >= 3) {
-    console.log(player.moveset);
+  for (i = 0; i <= 3; i++) {
+    console.log(Object.keys(player.moveset));
   }
 }
